@@ -1,14 +1,15 @@
 import React from 'react';
-import { StyleSheet, Image, TextInput, TouchableOpacity, KeyboardAvoidingView, ScrollView, Text } from 'react-native';
+import { Image, TextInput, TouchableOpacity, KeyboardAvoidingView, ScrollView, Text } from 'react-native';
 import xildemy from '../assets/xildemy.png';
-
+import estilos from './styles.js';
+import * as Styled from './styles.js';
 function logar() {
     alert('Logado com sucesso!')
 }
 
 export default function login() {
     return (
-        <ScrollView style={estilos.container}> 
+        <Styled.Container>
                 <KeyboardAvoidingView style={estilos.keybord} behavior='padding'>
                     <Image source={xildemy} style={estilos.img} />
 
@@ -32,49 +33,10 @@ export default function login() {
                     </TouchableOpacity>
 
                 </KeyboardAvoidingView>
-        </ScrollView>
+    
+        </Styled.Container>
     )
 
 }
 
 
-const estilos = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#093366',
-    },
-    keybord: {
-        alignItems: 'center',
-    },
-    text: {
-        fontSize: 40,
-        color: '#FFFFFF'
-    },
-    img: {
-        marginBottom: 100,
-        marginTop: 30
-    },
-    input: {
-        backgroundColor: '#FFFFFF',
-        borderColor: '#FFFFFF',
-        color: '#093366',
-        width: 350,
-        marginTop: 10
-
-    },
-    texto: {
-        fontSize: 25,
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontWeight: 'bold',
-        marginLeft: 15,
-        marginTop: 2
-    },
-    botao: {
-        width: 100,
-        height: 40,
-        borderRadius: 5,
-        marginTop: 40,
-        backgroundColor: '#1ABC9C'
-    }
-})
