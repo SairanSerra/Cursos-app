@@ -10,22 +10,30 @@ const CreateAccount = ()=>{
 
             <Styled.Img source={xildemy}/>
 
+            <Styled.StatusBar backgroundColor="#093366"/>
+
             <Styled.Title>Cadastro</Styled.Title>
 
             <Styled.InputText
             placeholder='Nome'
+            placeholderTextColor='#093366'
             />
 
             <Styled.InputText
             placeholder='Email'
+            placeholderTextColor='#093366'
             />
 
             <Styled.InputText
             placeholder='Senha'
+            keyboardType='numeric'
+            placeholderTextColor='#093366'
             />
 
             <Styled.InputText
             placeholder='Confirme a Senha'
+            keyboardType='numeric'
+            placeholderTextColor='#093366'
             />
 
 
