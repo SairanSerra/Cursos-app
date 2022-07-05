@@ -6,7 +6,7 @@ function logar() {
     alert('Logado com sucesso!')
 }
 
-export default function login() {
+const login = ()=> {
     return (
         <Styled.Container>
                 <Styled.Keybord behavior='padding'>
@@ -30,5 +30,5 @@ export default function login() {
     )
 
 }
-
+export default login;
 
