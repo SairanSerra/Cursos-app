@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
+// import Icon from 'react-native-vector-icons/FontAwesome';
 import xildemy from '../../../assets/xildemy.png';
 
 import * as Styled from './styles.js';
