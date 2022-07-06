@@ -1,42 +1,43 @@
 import React from "react";
-import * as Style from './styles';
+import xildemy from '../../../assets/xildemy.png'
+import * as Styled from './styles';
 
-const CreateAcount = ()=>{
-
+const CreateAccount = ()=>{
     return(
-        <Style.View>
-            <Style.AvoidingView>
-                <Style.Title>Cadastro</Style.Title>
-                <Style.InputText
-                placeholder="Nome"
-                />
-                 <Style.InputText
-                placeholder="Email"
-                />
-                <Style.InputText
-                placeholder="Senha"
-                />
-                <Style.InputText
-                placeholder="Confirme a senha"
-                />
-                <Style.Button>
-                    <Style.TextButton>
-                        Cadastrar
-                    </Style.TextButton>
-                </Style.Button>
-                <Style.ButtonBack>
-                    <Style.TextBack>
-                        Voltar
-                    </Style.TextBack>
-                </Style.ButtonBack>
-            </Style.AvoidingView>
-        </Style.View>
+    <Styled.ScrollView>
+        <Styled.KeyboardAvoidingView>
 
+            <Styled.Img source={xildemy}/>
+
+            <Styled.StatusBar backgroundColor="#093366"/>
+
+            <Styled.Title>Cadastro</Styled.Title>
+
+            <Styled.InputText
+            placeholder='Nome'
+            placeholderTextColor='#093366'
+            />
+
+            <Styled.InputText
+            placeholder='Email'
+            placeholderTextColor='#093366'
+            />
+
+            <Styled.InputText
+            placeholder='Senha'
+            keyboardType='numeric'
+            placeholderTextColor='#093366'
+            />
+
+            <Styled.InputText
+            placeholder='Confirme a Senha'
+            keyboardType='numeric'
+            placeholderTextColor='#093366'
+            />
+ 
+        </Styled.KeyboardAvoidingView>
+    </Styled.ScrollView>
 
     )
-
 }
-
-
-
-export default CreateAcount;
+export default CreateAccount;

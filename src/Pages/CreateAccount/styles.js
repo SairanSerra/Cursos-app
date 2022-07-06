@@ -1,46 +1,29 @@
-import styled from "styled-components";
+import styled from "styled-components/native";
 
-export const View = styled.ScrollView`
-flex: 1;
+export const ScrollView = styled.ScrollView`
+flex:1;
 background-color: #093366;
-`;
-
-export const AvoidingView = styled.KeyboardAvoidingView`
+`
+export const KeyboardAvoidingView = styled.KeyboardAvoidingView`
 align-items: center;
 `;
-
-export const InputText =  styled.TextInput`
-background-color: #FFFFFF;
-width: 350px;
-margin-top: 10px;
-`;
-
-export const Title = styled.Text`
-margin-top: 100px;
-margin-bottom: 40px;
-font-size: 40px;
-color:#FFFFFF;
-font-weight: bold;
-`;
-
-export const Button = styled.TouchableOpacity`
-background-color: #1ABC9C;
-width: 150px;
-height: 40px;
-border-radius: 3px;
-margin-top: 80px;
-`;
-
-export const TextButton = styled.Text`
-font-size: 30px;
-margin-left: 9px;
-`;
-
-export const ButtonBack = styled.TouchableOpacity`
+export const Img = styled.Image`
+width: 210px;
+height: 120px;
 margin-top: 20px;
 `;
-
-export const TextBack = styled.Text`
-color:#FFFFFF;
-font-size: 20px;
+export const Title = styled.Text`
+font-size: 40px;
+color: #FFFFFF;
+font-weight: bold;
+margin-bottom: 100px;
 `;
+export const InputText = styled.TextInput`
+background-color: #FFFFFF;
+width: 300px;
+margin-bottom:10px;
+`;
+
+export const StatusBar = styled.StatusBar`
+`;
+
