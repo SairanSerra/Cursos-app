@@ -34,6 +34,18 @@ const CreateAccount = ()=>{
             keyboardType='numeric'
             placeholderTextColor='#093366'
             />
+
+            <Styled.Button>
+                <Styled.Textbutton>
+                    Cadastrar
+                </Styled.Textbutton>
+            </Styled.Button>
+
+            <Styled.ButtonBack>
+                <Styled.TextBack>
+                    Voltar
+                </Styled.TextBack>
+            </Styled.ButtonBack>
  
         </Styled.KeyboardAvoidingView>
     </Styled.ScrollView>
