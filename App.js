@@ -8,7 +8,7 @@ import CreateAcount from './src/Pages/CreateAccount';
 export default function App(){
 return (
     <>
-     <CreateAcount/> 
+     <Login/> 
     </>
     
    

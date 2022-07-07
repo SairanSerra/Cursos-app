@@ -8,18 +8,23 @@ background-color: #093366;
 export const Keybord = styled.KeyboardAvoidingView`
 align-items: center;
 `;
+export const Title = styled.Text`
+color:#FFFFFF;
+font-size: 80px;
+margin-bottom: 15px;
+`;
 
 export const StatusBar = styled.StatusBar`
 `;
 
 export const Img = styled.Image`
-margin-bottom: 100px;
+margin-bottom: 10px;
 margin-top: 30px;
 `;
 
 export const EsqueciSenha = styled.TouchableOpacity`
 color:#FFFFFF;
-margin-top: 120px;
+margin-top: 70px;
 `;
 
 export const TextEsqueci = styled.Text`

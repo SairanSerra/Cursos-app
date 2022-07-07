@@ -17,6 +17,8 @@ const login = ()=> {
 
                     <Styled.Img source={xildemy}/>
 
+                    <Styled.Title>Xildemy</Styled.Title>
+
                     <Styled.Input
                         placeholder='Email'
                         placeholderTextColor='#093366'                      
@@ -28,7 +30,7 @@ const login = ()=> {
                         maxLength={8}                                        
                     />
                     <Styled.Olho>
-                    <Icon name="eye" size={20} color="black" />
+                    {/* <Icon name="eye" size={20} color="black" /> */}
                     </Styled.Olho>
 
                     <Styled.Login 
