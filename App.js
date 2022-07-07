@@ -1,17 +1,24 @@
 import React from 'react';
-import { Text, StyleSheet, View, Image} from 'react-native';
-import { back } from 'react-native/Libraries/Animated/Easing';
-import capa from './assets/fig3.png';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import Login from './src/Pages/Login';
 import CreateAcount from './src/Pages/CreateAccount';
 
+// const Stack = createStackNavigator();
+
 export default function App(){
 return (
-    <>
-     <Login/> 
-    </>
+
+    <CreateAcount/>
     
-   
+    // <NavigationContainer>
+    //     <Stack.Navigator>
+    //     <Stack.Screen name="Login" component={Login} />
+    //     <Stack.Screen name="Cadastro" component={CreateAcount} />
+    //     </Stack.Navigator>        
+    // </NavigationContainer>
+    
+
    
   
 );
