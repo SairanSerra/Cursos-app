@@ -1,5 +1,5 @@
 import React from 'react';
-// import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import xildemy from '../../../assets/xildemy.png';
 
 import * as Styled from './styles.js';
@@ -8,7 +8,7 @@ function logar() {
     alert('Logado com sucesso!')
 }
 
-const login = ()=> {
+const Login = ()=> {
     return (
         <Styled.Container>
                 <Styled.Keybord behavior='padding'>
@@ -30,7 +30,7 @@ const login = ()=> {
                         maxLength={8}                                        
                     />
                     <Styled.Olho>
-                    {/* <Icon name="eye" size={20} color="black" /> */}
+                    <Icon name="eye" size={20} color="black" />
                     </Styled.Olho>
 
                     <Styled.Login 
@@ -52,5 +52,5 @@ const login = ()=> {
     )
 
 }
-export default login;
+export default Login;
 
