@@ -46,6 +46,7 @@ border-color: #FFFFFF;
 color: #093366;
 width: 350px;
 margin-top: 10px;
+font-size: 15px;
 `;
 
 export const Login = styled.TouchableOpacity`

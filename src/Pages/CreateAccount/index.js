@@ -1,8 +1,10 @@
 import React from "react";
 import xildemy from '../../../assets/xildemy.png'
+import { useNavigation } from "@react-navigation/native";
 import * as Styled from './styles';
 
 const CreateAccount = ()=>{
+    const {goBack} = useNavigation();
     return(
     <Styled.ScrollView>
         <Styled.KeyboardAvoidingView>
@@ -41,7 +43,7 @@ const CreateAccount = ()=>{
                 </Styled.Textbutton>
             </Styled.Button>
 
-            <Styled.ButtonBack>
+            <Styled.ButtonBack onPress={()=>goBack()}>
                 <Styled.TextBack>
                     Voltar
                 </Styled.TextBack>
