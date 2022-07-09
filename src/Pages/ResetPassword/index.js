@@ -7,7 +7,14 @@ const ResetPassword = () => {
 
     return (
         <Styled.View>
-          <Styled.Title>Helo World!</Styled.Title>  
+          <Styled.Title>Digite seu email</Styled.Title> 
+          <Styled.Input 
+          placeholder="Digite seu email"
+          placeholderTextColor="#093366"
+          />
+          <Styled.BtnConfirm>
+          <Styled.TextConfirm>Continuar</Styled.TextConfirm>
+          </Styled.BtnConfirm>
         </Styled.View>
         
 )
