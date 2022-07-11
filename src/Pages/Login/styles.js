@@ -7,6 +7,7 @@ background-color: #093366;
 
 export const Keybord = styled.KeyboardAvoidingView`
 align-items: center;
+padding: 25px;
 `;
 export const Title = styled.Text`
 color:#FFFFFF;
@@ -34,10 +35,6 @@ text-decoration: underline;
 `;
 
 export const Olho = styled.TouchableOpacity`
-position: absolute;
-position: relative;
-bottom:37px;
-left: 150px;
 `;
 
 export const Input = styled.TextInput`

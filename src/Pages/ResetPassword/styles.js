@@ -33,3 +33,10 @@ export const TextConfirm = styled.Text`
 color:#FFFFFF;
 font-size: 20px;
 `;
+export const ButtonBack = styled.TouchableOpacity`
+margin-top: 15px;
+`;
+export const TextBack = styled.Text`
+color:#FFFFFF;
+font-size: 20px;
+`;

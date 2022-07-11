@@ -6,6 +6,7 @@ background-color: #093366;
 `
 export const KeyboardAvoidingView = styled.KeyboardAvoidingView`
 align-items: center;
+padding: 13px;
 `;
 export const Img = styled.Image`
 width: 210px;
@@ -17,7 +18,7 @@ font-size: 40px;
 margin-top: 20px;
 color: #FFFFFF;
 font-weight: bold;
-margin-bottom: 70px;
+margin-bottom: 60px;
 `;
 export const InputText = styled.TextInput`
 background-color: #FFFFFF;
@@ -41,7 +42,7 @@ export const Textbutton = styled.Text`
 color:#FFFFFF;
 font-size: 20px;
 text-align: center;
-margin-top:4px
+margin-top:4px;
 `;
 
 export const ButtonBack = styled.TouchableOpacity`
@@ -50,4 +51,6 @@ export const ButtonBack = styled.TouchableOpacity`
 export const TextBack = styled.Text`
 color:#FFFFFF;
 font-size: 20px;
+`;
+export const ButtonIcon = styled.TouchableOpacity`
 `;

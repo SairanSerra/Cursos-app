@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import { StyleSheet } from "react-native";
 import xildemy from '../../../assets/xildemy.png'
 import { useNavigation } from "@react-navigation/native";
 import * as Styled from './styles';
+import { Input } from "@rneui/base";
+import Icon  from "react-native-vector-icons/Ionicons";
+
+
 
 const CreateAccount = ()=>{
     const {goBack} = useNavigation();
+
+    const [createpassword,setcreatepassword] = useState(true);
+    const [createpasswordconfirm,setcreatepasswordconfirm] = useState(true);
+
     return(
     <Styled.ScrollView>
         <Styled.KeyboardAvoidingView>
@@ -15,26 +24,58 @@ const CreateAccount = ()=>{
 
             <Styled.Title>Cadastro</Styled.Title>
 
-            <Styled.InputText
+            <Input
             placeholder='Nome'
-            placeholderTextColor='#093366'
+            placeholderTextColor='#FFFFFF'
+            style={style.input}
             />
 
-            <Styled.InputText
+            <Input
             placeholder='Email'
-            placeholderTextColor='#093366'
+            placeholderTextColor='#FFFFFF'
+            style={style.input}
             />
 
-            <Styled.InputText
+            <Input
             placeholder='Senha'
             keyboardType='numeric'
-            placeholderTextColor='#093366'
-            />
+            placeholderTextColor='#FFFFFF'
+            style={style.input}
+            maxLength={8}
+            secureTextEntry={createpassword}
+            rightIcon={
+                <Styled.ButtonIcon onPress={()=>setcreatepassword(!createpassword)}>
+                {
+                    createpassword
+                    ? 
+                    <Icon name="eye" size={25} color="#FFFF"/>
+                    :
+                    <Icon name="eye-off" size={25} color="#FFFF"/>
+                }
+                
 
-            <Styled.InputText
+            </Styled.ButtonIcon>
+            }
+            />
+           
+
+            <Input
             placeholder='Confirme a Senha'
             keyboardType='numeric'
-            placeholderTextColor='#093366'
+            placeholderTextColor='#FFFFFF'
+            maxLength={8}
+            style={style.input}
+            secureTextEntry={createpasswordconfirm}
+            rightIcon={
+                <Styled.ButtonIcon onPress={()=>setcreatepasswordconfirm(!createpasswordconfirm)}>
+                    {
+                        createpasswordconfirm ?
+                        <Icon name="eye" size={25} color="#FFFF"/>
+                        :
+                        <Icon name="eye-off" size={25} color="#FFFF"/>
+                    }
+                </Styled.ButtonIcon>
+            }
             />
 
             <Styled.Button>
@@ -54,4 +95,11 @@ const CreateAccount = ()=>{
 
     )
 }
+const style = StyleSheet.create({
+    input:{
+        color: '#FFFF',
+        borderBottomColor:'#FFFFFF',
+       
+    },
+})
 export default CreateAccount;

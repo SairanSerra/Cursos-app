@@ -1,7 +1,9 @@
 import React, { useState} from 'react';
+import { StyleSheet } from 'react-native';
 import  Icon  from 'react-native-vector-icons/Ionicons';
 import xildemy from '../../../assets/xildemy.png';
 import { useNavigation } from '@react-navigation/native';
+import { Input } from '@rneui/base';
 
 import * as Styled from './styles.js';
 
@@ -15,6 +17,7 @@ const Login = ()=> {
     
     const [passLogin, setPassLogin] =  useState(true);
     const [hidepass, setHidepass] =  useState(true);
+    
     return (
         <Styled.Container>
                 <Styled.Keybord behavior='padding'>
@@ -25,28 +28,33 @@ const Login = ()=> {
 
                     <Styled.Title>Xildemy</Styled.Title>
 
-                    <Styled.Input
+                    <Input
                         placeholder='Email'
-                        placeholderTextColor='#093366'                      
+                        style={style.input}
+                        placeholderTextColor='#FFFFFF'                      
                     />
-                    <Styled.Input
+                    <Input
                         placeholder='Senha'
-                        placeholderTextColor='#093366'
+                        placeholderTextColor='#FFFFFF'
                         keyboardType='numeric' 
                         value={passLogin}
+                        style={style.input}
                         onchangeText={(value) => setPassLogin(value)}
                         secureTextEntry={hidepass}  
-                        maxLength={8}                                        
-                    />
-                    <Styled.Olho onPress={()=>setHidepass(!hidepass)}>
+                        maxLength={8}
+                        rightIcon={
+                            <Styled.Olho onPress={()=>setHidepass(!hidepass)}>
                         {
+                            
                             hidepass ?
-                            <Icon name="eye" size={25} color="#093366" />
+                            <Icon name="eye" size={25} color="#FFFFFF" />
                             :
-                            <Icon name="eye-off" size={25} color="#093366" />
+                            <Icon name="eye-off" size={25} color="#FFFFFF" />
                         }
                     
                     </Styled.Olho>
+                        }                                        
+                    />                    
 
                     <Styled.Login 
                     onPress={logar}>
@@ -67,5 +75,15 @@ const Login = ()=> {
     )
 
 }
+
+const style = StyleSheet.create({
+    input:{
+        color: '#FFFF',
+        borderBottomColor:'#FFFFFF',
+        textAlign:'center',
+       
+    },
+})
+
 export default Login;
 
