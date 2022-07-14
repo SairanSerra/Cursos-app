@@ -1,13 +1,14 @@
 import styled from "styled-components/native";
 
 export const Container = styled.ScrollView`
-flex: 1;
-background-color: #093366;
+
 `;
 
 export const Keybord = styled.KeyboardAvoidingView`
 align-items: center;
 padding: 25px;
+flex: 1;
+background-color: #093366;
 `;
 export const Title = styled.Text`
 color:#FFFFFF;

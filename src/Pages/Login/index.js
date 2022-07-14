@@ -4,22 +4,29 @@ import  Icon  from 'react-native-vector-icons/Ionicons';
 import xildemy from '../../../assets/xildemy.png';
 import { useNavigation } from '@react-navigation/native';
 import { Input } from '@rneui/base';
+import axios from 'axios';
 
 import * as Styled from './styles.js';
 
-function logar() {
-    alert('Logado com sucesso!')
-}
+
 
 const Login = ()=> {
+
     const {navigate} = useNavigation();
         
     
-    const [passLogin, setPassLogin] =  useState(true);
+    const [passLogin, setPassLogin] =  useState('');
     const [hidepass, setHidepass] =  useState(true);
+    const [emaillogin,setEmailLogin] = useState('');
+
+    async function logar() {
+        console.log(passLogin);
+        const response = await axios.post('https://xildemy.herokuapp.com/api/auth',{data:{email:emaillogin,password:passLogin}});
+        console.log(response.data);
+      }
     
     return (
-        <Styled.Container>
+        // <Styled.Container>
                 <Styled.Keybord behavior='padding'>
 
                     <Styled.StatusBar backgroundColor='#093366'/>
@@ -31,15 +38,17 @@ const Login = ()=> {
                     <Input
                         placeholder='Email'
                         style={style.input}
-                        placeholderTextColor='#FFFFFF'                      
+                        value={emaillogin}
+                        placeholderTextColor='#FFFFFF'  
+                        onChangeText={(value)=> setEmailLogin(value)}                    
                     />
                     <Input
                         placeholder='Senha'
                         placeholderTextColor='#FFFFFF'
                         keyboardType='numeric' 
-                        value={passLogin}
+                       value={passLogin}
                         style={style.input}
-                        onchangeText={(value) => setPassLogin(value)}
+                        onChangeText={(value) => setPassLogin(value)}
                         secureTextEntry={hidepass}  
                         maxLength={8}
                         rightIcon={
@@ -71,7 +80,7 @@ const Login = ()=> {
 
                 </Styled.Keybord>
     
-        </Styled.Container>
+       // </Styled.Container>
     )
 
 }
