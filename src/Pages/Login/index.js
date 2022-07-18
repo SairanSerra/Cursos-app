@@ -4,6 +4,7 @@ import  Icon  from 'react-native-vector-icons/Ionicons';
 import xildemy from '../../../assets/xildemy.png';
 import { useNavigation } from '@react-navigation/native';
 import { Input } from '@rneui/base';
+import Toast from 'react-native-toast-message'
 import axios from 'axios';
 
 import * as Styled from './styles.js';
@@ -19,10 +20,22 @@ const Login = ()=> {
     const [hidepass, setHidepass] =  useState(true);
     const [emaillogin,setEmailLogin] = useState('');
 
+    function teste(){
+        console.log('tesdte');
+        Toast.show({
+            type: 'error',
+            text1: 'teste cornin ',
+          });
+    }
+
     async function logar() {
-        console.log(passLogin);
-        const response = await axios.post('https://xildemy.herokuapp.com/api/auth',{data:{email:emaillogin,password:passLogin}});
-        console.log(response.data);
+        try{
+        const response = await axios.post('https://xildemy.herokuapp.com/api/login',{email:emaillogin,password:passLogin,device_name:'teste'});
+      
+        }catch(e){
+          
+        }
+        
       }
     
     return (
@@ -66,7 +79,7 @@ const Login = ()=> {
                     />                    
 
                     <Styled.Login 
-                    onPress={logar}>
+                    onPress={teste}>
                     <Styled.Texto>Login</Styled.Texto> 
                     </Styled.Login>
 
