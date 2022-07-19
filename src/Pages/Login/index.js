@@ -21,25 +21,37 @@ const Login = ()=> {
     const [emaillogin,setEmailLogin] = useState('');
 
     function teste(){
-        console.log('tesdte');
-        Toast.show({
-            type: 'error',
-            text1: 'teste cornin ',
-          });
+        // console.log('tesdte');
+       
     }
 
     async function logar() {
         try{
         const response = await axios.post('https://xildemy.herokuapp.com/api/login',{email:emaillogin,password:passLogin,device_name:'teste'});
-      
+
+        if(response.data.success == false){
+          return  Toast.show({
+                type: 'error',
+                text1: response.data.message,
+              });
+        }
+
+        return  Toast.show({
+            type: 'success',
+            text1: 'Logado com sucesso',
+          });
+
         }catch(e){
-          
+            Toast.show({
+                type: 'error',
+                text1: e.data.message,
+              });
         }
         
       }
     
     return (
-        // <Styled.Container>
+        <Styled.Container>
                 <Styled.Keybord behavior='padding'>
 
                     <Styled.StatusBar backgroundColor='#093366'/>
@@ -79,7 +91,7 @@ const Login = ()=> {
                     />                    
 
                     <Styled.Login 
-                    onPress={teste}>
+                    onPress={logar}>
                     <Styled.Texto>Login</Styled.Texto> 
                     </Styled.Login>
 
@@ -93,7 +105,7 @@ const Login = ()=> {
 
                 </Styled.Keybord>
     
-       // </Styled.Container>
+        </Styled.Container>
     )
 
 }
