@@ -26,7 +26,7 @@ margin-top: 30px;
 
 export const EsqueciSenha = styled.TouchableOpacity`
 color:#FFFFFF;
-margin-top: 70px;
+margin-top: 50px;
 `;
 
 export const TextEsqueci = styled.Text`
@@ -66,6 +66,7 @@ margin-top: 2px;
 
 export const Create = styled.TouchableOpacity`
 margin-top: 13px;
+margin-bottom: 14px;
 background-color: #AEB6BF;
 border-radius: 5px;
 width: 130px;
