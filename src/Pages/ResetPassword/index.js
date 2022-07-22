@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import * as Styled from "./styles";
 import { useNavigation } from "@react-navigation/native";
 import { Input } from "@rneui/base";
+import {Auth} from '../../context/Auth'
 
 
 
 const ResetPassword = () => {
-const {goBack} = useNavigation()
+const {nome} = useContext(Auth);
+const {goBack} = useNavigation();
     return (
         <Styled.View>
-          {/* <Styled.Title>Digite seu email</Styled.Title>  */}
+          <Styled.Title>Nome: {nome}</Styled.Title> 
 
           <Input 
           placeholder="Digite seu email"

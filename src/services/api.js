@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://xildemy.herokuapp.com"
+    baseURL: "https://xildemy.herokuapp.com/api"
 });
 
 export default api;

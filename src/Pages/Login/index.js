@@ -27,28 +27,7 @@ const Login = ()=> {
     }
 
     async function logar() {
-        try{
-            console.log(api);
-        const response = await axios.post('/login',{email:emaillogin,password:passLogin,device_name:'teste'});
-
-        if(response.data.success == false){
-          return  Toast.show({
-                type: 'error',
-                text1: response.data.message,
-              });
-        }
-
-        return  Toast.show({
-            type: 'success',
-            text1: 'Logado com sucesso',
-          });
-
-        }catch(e){
-            Toast.show({
-                type: 'error',
-                text1: e.message,
-              });
-        }
+        
         
       }
     
@@ -97,7 +76,7 @@ const Login = ()=> {
                     <Styled.Texto>Login</Styled.Texto> 
                     </Styled.Login>
 
-                    <Styled.EsqueciSenha onPress={()=>navigate('ResetPassword')}>
+                    <Styled.EsqueciSenha onPress={()=>navigate('Home')}>
                     <Styled.TextEsqueci>Esqueci minha senha</Styled.TextEsqueci>
                     </Styled.EsqueciSenha>
 
