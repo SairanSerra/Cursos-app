@@ -1,4 +1,5 @@
 import React, {createContext, useState} from "react";
+import api from '../services/api'
 import { useNavigation } from "@react-navigation/native";
 
 export const Auth = createContext({});
@@ -7,10 +8,10 @@ function AuthProvider({children}){
     const [token,setToken] =useState({});
     const {navigate} = useNavigation();
 
-   async function Login(email,password,device_name){
+async function SignIn(email,password,device_name){
         try{
       
-        const response = await axios.post('/login',{email:email,password:password,device_name:device_name});
+        const response = await api.post('/login',{email:email,password:password,device_name:device_name});
 
         if(response.data.success == false){
           throw 401;
@@ -32,7 +33,7 @@ function AuthProvider({children}){
         }
     }
     return(
-        <Auth.Provider value={{nome:'Xildera the monster',Login,token}}>
+        <Auth.Provider value={{nome:'Xildera the monster',SignIn,token}}>
         {children}
         </Auth.Provider>
     )

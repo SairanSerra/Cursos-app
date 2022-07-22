@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import * as Styled from "./styles";
 import { useNavigation } from "@react-navigation/native";
 import { Input } from "@rneui/base";
-import {Auth} from '../../context/Auth'
+import { Auth } from "../../context/Auth";
 
 
 
