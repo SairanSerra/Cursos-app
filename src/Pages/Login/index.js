@@ -4,6 +4,7 @@ import  Icon  from 'react-native-vector-icons/Ionicons';
 import xildemy from '../../../assets/xildemy.png';
 import { useNavigation } from '@react-navigation/native';
 import { Input } from '@rneui/base';
+import api from '../../services/api';
 import Toast from 'react-native-toast-message'
 import axios from 'axios';
 
@@ -27,7 +28,8 @@ const Login = ()=> {
 
     async function logar() {
         try{
-        const response = await axios.post('https://xildemy.herokuapp.com/api/login',{email:emaillogin,password:passLogin,device_name:'teste'});
+            console.log(api);
+        const response = await axios.post('/login',{email:emaillogin,password:passLogin,device_name:'teste'});
 
         if(response.data.success == false){
           return  Toast.show({
@@ -44,7 +46,7 @@ const Login = ()=> {
         }catch(e){
             Toast.show({
                 type: 'error',
-                text1: e.data.message,
+                text1: e.message,
               });
         }
         
