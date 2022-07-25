@@ -1,39 +1,27 @@
 import React, {createContext, useState} from "react";
 import api from '../services/api'
 import { useNavigation } from "@react-navigation/native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const Auth = createContext({});
 
 function AuthProvider({children}){
-    const [token,setToken] =useState({});
+    const [token,setToken] =useState(null);
     const {navigate} = useNavigation();
 
-async function SignIn(email,password,device_name){
-        try{
-      
-        const response = await api.post('/login',{email:email,password:password,device_name:device_name});
+async function getToken(){
+    const Dadostoken = await AsyncStorage.getItem('token');
+    setToken(Dadostoken) ;
+}
 
-        if(response.data.success == false){
-          throw 401;
-        }
-        setToken({
-                email:email,
-                token: response.data.token
-            });
-        return  Toast.show({
-            type: 'success',
-            text1: 'Logado com sucesso',
-          });
+async function clearToken(){
+    await AsyncStorage.clear();
+    setToken(null);
+}
+    
 
-        }catch(e){
-            Toast.show({
-                type: 'error',
-                text1: e.message,
-              });
-        }
-    }
     return(
-        <Auth.Provider value={{nome:'Xildera the monster',SignIn,token}}>
+        <Auth.Provider value={{nome:'Xildera the monster',getToken,clearToken,token,setToken}}>
         {children}
         </Auth.Provider>
     )

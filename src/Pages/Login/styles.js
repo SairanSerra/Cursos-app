@@ -5,6 +5,8 @@ export const Container = styled.ScrollView`
 `;
 
 export const Keybord = styled.KeyboardAvoidingView`
+`;
+export const View = styled.View`
 align-items: center;
 padding: 25px;
 flex: 1;
@@ -12,7 +14,7 @@ background-color: #093366;
 `;
 export const Title = styled.Text`
 color:#FFFFFF;
-font-size: 80px;
+font-size: 60px;
 margin-bottom: 15px;
 `;
 
@@ -20,6 +22,8 @@ export const StatusBar = styled.StatusBar`
 `;
 
 export const Img = styled.Image`
+height: 100px;
+width: 170px;
 margin-bottom: 10px;
 margin-top: 30px;
 `;

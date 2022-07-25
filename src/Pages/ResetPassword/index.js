@@ -11,7 +11,6 @@ const {nome} = useContext(Auth);
 const {goBack} = useNavigation();
     return (
         <Styled.View>
-          <Styled.Title>Nome: {nome}</Styled.Title> 
 
           <Input 
           placeholder="Digite seu email"
