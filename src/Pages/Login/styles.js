@@ -71,7 +71,7 @@ margin-top: 2px;
 export const Create = styled.TouchableOpacity`
 margin-top: 13px;
 margin-bottom: 14px;
-background-color: #AEB6BF;
+background-color: #FFFFFF;
 border-radius: 5px;
 width: 130px;
 height: 40px;
